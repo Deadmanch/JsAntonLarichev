@@ -9,24 +9,21 @@ addNewTask('Задача 3');
 
 const deleteTaskArr = (task) => {
 	const myIndex = tasks.indexOf(task);
-	if(myIndex !== -1) {
-		tasks.splice(myIndex, 1);
+	if(myIndex === -1) {
+		return;
 	}
-	return tasks;
+	return tasks.splice(myIndex, 1);
 }
 
 deleteTaskArr('Задача 3');
 
 const prioritizeTask = (task) => {
-	const myIndex = tasks.indexOf(task);
-	
-	if(myIndex !== -1) {
-		const oldTask = tasks[myIndex];
-		tasks.splice(myIndex, 1);
-		tasks.unshift(oldTask);
+	const result = deleteTaskArr(task);
+	if (!result) {
+		return;
 	}
-	return tasks;
+	tasks.unshift(result[0]);
 }
-prioritizeTask('Задача 2')
+prioritizeTask('Задача ew')
 console.log(tasks)
 
