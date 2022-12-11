@@ -1,1 +1,1 @@
-# JsAntonLarichev
+# Прохождение курса по Javascript от Антона Ларичева
