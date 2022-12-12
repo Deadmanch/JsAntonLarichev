@@ -9,8 +9,9 @@
 <body style="background-color: #131122; text-align: center">
 <img src="./logo.svg" alt="Logo" />
 <div class="panel">Я люблю своего Симбомбончика</div>
-<input class="input" />
-<button class="button">Изменить</button>
+<input class="input" onkeydown="inputChange(event)"/>
+<button class="button" onclick="submitForm()">Изменить</button>
+<div class="notification">Запись успешно изменена</div>
 <script src="./js/script.js"></script>
 </body>
 </html>
